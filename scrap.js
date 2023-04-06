@@ -7,12 +7,9 @@ axios(baseURL, { headers: { "Accept-Encoding": "gzip,deflate,compress" } }).then
     const $ = cheerio.load(html)
     var list = []
 
-    $('.dl').each(function (index, elem) {
-        //console.log(index);
-        const text = $(this).find('img')
-
-        const imgURL = $(this).find('a').children('img').eq(index).attr('src')
-        console.log(text)
+    $('.dl > a').each(function (index, elem) {
+        const imgURL = $(this).children('img').attr('src')
+        console.log(imgURL)
     })
 
     /*$('a', html).each(function () {
