@@ -1,4 +1,4 @@
-import {a} from './react/react.js'
+const {mama} = require('./react/react.js')
 const axios = require('axios')
 const cheerio = require('cheerio')
 const express = require('express')
@@ -74,7 +74,7 @@ for (let i = 0; i <= 7; i++) {
 }
 app.listen(PORT, () => console.log(`server runing on PORT: ${PORT}`))
 
-console.log(a);
+console.log();
 
 /*
 //axios.get('https://www.list.am/item/16793715', { headers: { "Accept-Encoding": "gzip,deflate,compress" } }).then(html => {
